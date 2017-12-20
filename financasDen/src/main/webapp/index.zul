@@ -1,0 +1,58 @@
+<?page title="Auto Generated index.zul"?>
+<zk>
+<window title="Projeto Cadastro de Contas." border="normal" width="100%" 
+apply="br.com.denise.controle.CIndex">
+	<button label="Movimentação" href="index1.zul"/>
+	<grid>
+	
+	    <columns>
+			<column label="Dados da Conta" width="110px" />
+			<column label="Entradas"  />
+			
+		</columns>
+		<rows>
+		    <row>
+				<label width="50" value="Agência"/>
+				<textbox id="intAgencia" width="200px" />
+		    </row>
+			<row>
+				<label width="50" value="Número da Conta" />
+				<textbox id="intConta" width="200px" />
+			</row>
+			<row>
+				<label width="50" value="Número do Banco " />
+				<textbox id="intBanco" width="200px" />
+			</row>
+			<row>
+				<label width="50" value="Nome do Titular" />
+				<textbox width="600px" id="txtTitular"/>
+			</row>
+		    <row>
+			   <button label="Gravar" id="btnGravar" />
+		   </row>
+		</rows>
+	</grid>
+	<grid>
+	<rows>
+	<row>
+	<listbox id="lstContasCadastradas">
+		<listhead>
+			<listheader label="Agência" sort="auto" />
+			<listheader label="Conta" sort="auto" />
+			<listheader label="Banco" sort="auto" />
+			<listheader label="Titular" sort="auto" />
+		</listhead>
+		<template name="model">
+			<listitem>
+				<listcell label="${each.agencia}" />
+				<listcell label="${each.conta}" />
+				<listcell label="${each.banco}" />
+				<listcell label="${each.titular}" />
+			</listitem>
+		</template>
+	</listbox>
+	</row>
+	</rows>
+	</grid>
+</window>
+</zk>

@@ -1,0 +1,63 @@
+<?page title="Auto Generated index.zul"?>
+<zk>
+<window title="Projeto Cadastro de Movimentação de Contas." border="normal" width="100%"
+	apply="br.com.denise.controle.CIndex">
+	<grid>
+	
+	<columns>
+			<column label="Dados da Movimentação" width="110px" />
+			<column label="Entradas"  />
+			
+		</columns>
+		<rows>
+		    <row>
+		      <label value="Conta Bancaria"/>
+		      <combobox id="comboConta"">
+			      <comboitem label="Simple and Rich" />
+			      <comboitem label="Cool!" />
+			     <comboitem label="Thumbs Up!" />
+		    </combobox>
+			</row>
+			<row>
+				<label value="Tipo " />
+				<combobox id="comboTipo">
+			      <comboitem label="ENTRADA" />
+			      <comboitem label="SAIDA" />
+		        </combobox>
+			</row>
+			<row>
+				<label value="Data" />
+				</row>
+			<row>
+				<label value="Descrição" />
+				<textbox width="200px" id="txtDescricao"/>
+			</row>
+		    <row>
+			   <button label="Gravar" id="btnGravar" />
+		   </row>
+		</rows>
+	</grid>
+	<grid>
+	<rows>
+	<row>
+	<listbox id="lstContasCadastradas">
+		<listhead>
+			<listheader label="Agência" sort="auto" />
+			<listheader label="Conta" sort="auto" />
+			<listheader label="Banco" sort="auto" />
+			<listheader label="Titular" sort="auto" />
+		</listhead>
+		<template name="model">
+			<listitem>
+				<listcell label="${each.txtAgencia}" />
+				<listcell label="${each.txtConta}" />
+				<listcell label="${each.txtBanco}" />
+				<listcell label="${each.txtTitular}" />
+			</listitem>
+		</template>
+	</listbox>
+	</row>
+	</rows>
+	</grid>
+</window>
+</zk>
