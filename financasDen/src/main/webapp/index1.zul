@@ -26,8 +26,12 @@
 			</row>
 			<row>
 				<label value="Data" />
-				<datebox value="@bind(fx.birthday)"
-                            format="@load(vm.dateFormat)" width="150px"  tabindex="7"/>
+				<datebox id="dtData" value="@bind(fx.birthday)"
+                            format="@load(vm.dateFormat)" width="150px" />
+			</row>
+			<row>
+				<label width="50" value="Valor" />
+				<decimalbox id="decimalValor" format="##.###.###.##" width="200px"  tabindex="4" />
 			</row>
 			<row>
 				<label value="Descrição" />
