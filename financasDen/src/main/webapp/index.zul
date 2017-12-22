@@ -2,6 +2,7 @@
 <zk>
 <window title="Projeto Cadastro de Contas." border="normal" width="100%" 
 apply="br.com.denise.controle.CIndex">
+        
 	<button label="Movimentação" href="index1.zul"/>
 	<grid>
 	
@@ -54,5 +55,8 @@ apply="br.com.denise.controle.CIndex">
 	</row>
 	</rows>
 	</grid>
+	
+	
+	
 </window>
 </zk>

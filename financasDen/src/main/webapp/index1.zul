@@ -3,20 +3,19 @@
 <window title="Projeto Cadastro de Movimentação de Contas." border="normal" width="100%"
 	apply="br.com.denise.controle.CIndex">
 	<grid>
-	
-	<columns>
-			<column label="Dados da Movimentação" width="110px" />
+	   <columns>
+			<column label="Dados da Movimentação" width="170px" />
 			<column label="Entradas"  />
 			
 		</columns>
 		<rows>
 		    <row>
 		      <label value="Conta Bancaria"/>
-		      <combobox id="comboConta"">
-			      <comboitem label="Simple and Rich" />
-			      <comboitem label="Cool!" />
-			     <comboitem label="Thumbs Up!" />
-		    </combobox>
+		      <combobox id="comboConta" width="320px">
+			      <comboitem label="Buscar Conta do Banco de Dados" />
+			      <comboitem label="Buscar BD" />
+			      <comboitem label="Buscar BD" />
+		      </combobox>
 			</row>
 			<row>
 				<label value="Tipo " />
@@ -27,37 +26,17 @@
 			</row>
 			<row>
 				<label value="Data" />
-				</row>
+				<datebox value="@bind(fx.birthday)"
+                            format="@load(vm.dateFormat)" width="150px"  tabindex="7"/>
+			</row>
 			<row>
 				<label value="Descrição" />
-				<textbox width="200px" id="txtDescricao"/>
+				<textbox width="800px" id="txtDescricao"/>
 			</row>
 		    <row>
-			   <button label="Gravar" id="btnGravar" />
+			   <button label="Gravar Movimento" id="btnGravarMov" />
 		   </row>
 		</rows>
-	</grid>
-	<grid>
-	<rows>
-	<row>
-	<listbox id="lstContasCadastradas">
-		<listhead>
-			<listheader label="Agência" sort="auto" />
-			<listheader label="Conta" sort="auto" />
-			<listheader label="Banco" sort="auto" />
-			<listheader label="Titular" sort="auto" />
-		</listhead>
-		<template name="model">
-			<listitem>
-				<listcell label="${each.txtAgencia}" />
-				<listcell label="${each.txtConta}" />
-				<listcell label="${each.txtBanco}" />
-				<listcell label="${each.txtTitular}" />
-			</listitem>
-		</template>
-	</listbox>
-	</row>
-	</rows>
 	</grid>
 </window>
 </zk>
